@@ -1,0 +1,73 @@
+//GENERAL
+//CIRO SANCHEZ
+{
+"position": "top",
+"layer": "top",
+"reload_style_on_change": true,
+
+"modules-left": ["hyprland/workspaces"],
+"modules-center": ["clock"],
+"modules-right": ["network","pulseaudio","battery"],
+
+"hyprland/workspaces": {
+    "format": "{icon} {windows}",
+    "format-window-separator": " ",
+    "window-rewrite-default": "",
+    "tooltip": false,
+    "persistent-workspaces": {
+        "*": 5
+    },
+
+    "window-rewrite": {
+        "class<firefox>": "",
+        "class<kitty>": "",
+        "class<thunar>": "",
+        "class<vlc>": "󰕼",
+        "class<atril>": "󰂺",
+        "class<net.pcsx2.PCSX2>": ""
+    }
+},
+
+"battery": {
+    "format": "{icon} {capacity}%",
+    "format-icons": ["","","","",""],
+    "format-time": "{H} h {M} min",
+    "max-length": 25,
+    "interval": 60,
+    "states": {
+        "good": 95,
+        "warning": 30,
+        "critical": 15
+    },
+    "tooltip": false
+    //Charge icon and time 
+},
+
+"clock": {
+    "interval": 60,
+    "format": "{:%I:%M %p}",
+    //"timezone": "America/Denver", //CORREGIR NO MULTI TIME
+    "max-length": 25
+},
+
+"network": {
+    "interface": "wlan0",
+    "interval": 60,
+    "max-length": 50,
+    "format": "{ifname}",
+    "format-wifi": "",
+    "format-ethernet": "󱎔",
+    "format-disconnected": "",
+    "tooltip-format": "{ifname} via {gwaddr}",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+    "tooltip-format-ethernet": "{ipaddr}/{cidr}",
+    "tooltip-format-disconnected": "Disconnected"
+},
+
+"pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "󰝟",
+    "format-icons": [""],
+    "on-click-right": "pavucontrol"
+}
+}

@@ -1,0 +1,37 @@
+* {
+    border: none;
+    border-radius: 30px;
+    font-family: "Arial", "Roboto", "Font Awesome", "Nerd Font Hack";
+    font-size: 20px;
+    min-height:0px;
+    color: white;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+.modules-right, .modules-center, .modules-left {
+   margin: 2px 5px;
+   padding: 5px 10px;
+   color: white;
+}
+
+.modules-center {
+   background-color: rgba(54,69,79,1);
+   font-weight: bold;
+}
+
+.modules-right {
+   margin-right: 10px;
+   background-color: rgba(54,69,79,1);
+}
+
+.modules-left {
+   margin-left: 10px;
+   background-color: rgba(54,69,79,1);
+}
+
+#clock, #battery, #network, #pulseaudio #workspaces {
+    padding: 5px;
+}
