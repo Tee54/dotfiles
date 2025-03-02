@@ -7,10 +7,10 @@
 
 "modules-left": ["hyprland/workspaces"],
 "modules-center": ["clock"],
-"modules-right": ["network","pulseaudio","battery"],
+"modules-right": ["network","pulseaudio","battery","custom/power"],
 
 "hyprland/workspaces": {
-    "format": "{icon} {windows}",
+    "format": "{icon} {windows} ",
     "format-window-separator": " ",
     "window-rewrite-default": "",
     "tooltip": false,
@@ -29,7 +29,7 @@
 },
 
 "battery": {
-    "format": "{icon} {capacity}%",
+    "format": "{capacity}% {icon}",
     "format-icons": ["","","","",""],
     "format-time": "{H} h {M} min",
     "max-length": 25,
@@ -47,7 +47,16 @@
     "interval": 60,
     "format": "{:%I:%M %p}",
     //"timezone": "America/Denver", //CORREGIR NO MULTI TIME
-    "max-length": 25
+    "tooltip-format": "<tt>{calendar}</tt>",
+    "calendar": {
+        "format": {
+            "today": "<span color='#fAfBfC'><b>{}</b></span>"
+        } 
+    },
+    "actions": {
+        "on-click-right": "shift_down",
+        "on-click": "shift_up"
+    }
 },
 
 "network": {
@@ -61,13 +70,20 @@
     "tooltip-format": "{ifname} via {gwaddr}",
     "tooltip-format-wifi": "{essid} ({signalStrength}%)",
     "tooltip-format-ethernet": "{ipaddr}/{cidr}",
-    "tooltip-format-disconnected": "Disconnected"
+    "tooltip-format-disconnected": "Disconnected",
+    "on-click": "kitty nmtui"
 },
 
 "pulseaudio": {
-    "format": "{icon} {volume}%",
+    "format": "{volume}% {icon}",
     "format-muted": "󰝟",
     "format-icons": [""],
-    "on-click-right": "pavucontrol"
+    "on-click-right": "wpctl"
+},
+
+"custom/power": {
+    "format": "{icon}",
+    "format-icons": ["⏻"],
+    "on-click": "wlogout"
 }
 }

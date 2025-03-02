@@ -1,10 +1,9 @@
 * {
     border: none;
     border-radius: 30px;
-    font-family: "Arial", "Roboto", "Font Awesome", "Nerd Font Hack";
-    font-size: 20px;
-    min-height:0px;
     color: white;
+    font-size: 17px;
+    font-family: "Arial", "Roboto", "Font Awesome", "Nerd Font Hack";
 }
 
 window#waybar {
@@ -12,9 +11,9 @@ window#waybar {
 }
 
 .modules-right, .modules-center, .modules-left {
-   margin: 2px 5px;
-   padding: 5px 10px;
-   color: white;
+    margin: 2px 0 0 0; 
+    padding: 2px 5px 2px 5px; 
+    color: white;
 }
 
 .modules-center {
@@ -32,6 +31,6 @@ window#waybar {
    background-color: rgba(54,69,79,1);
 }
 
-#clock, #battery, #network, #pulseaudio #workspaces {
-    padding: 5px;
+#clock, #battery, #network, #pulseaudio, #custom-power, #workspaces {
+   margin: 0 10px 0 10px;
 }

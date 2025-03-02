@@ -1,0 +1,40 @@
+/*CONFIG FOR WOFI*/
+* {
+    font-family: FontAwesome;
+}
+
+window {
+    margin: 2px;
+    border: 3px solid #2e2e2e;
+    border-radius: 10px;
+    background-color: rgba(36,25,45,1);
+}
+
+#input {
+    margin: 5px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(7,54,66);
+    color: #fdf6e3;
+}
+
+#inner-box {
+    margin: 5px;
+    /*background-color: rgba(0,0,0,0.0);*/
+}
+
+#scroll {
+    margin: 0px;
+    border-radius: 5px;
+    /*background-color: rgba(7, 54, 66, 0.9);*/
+}
+
+#text {
+    margin: 1px;
+    border: 0px solid #44AA44;
+    color: #FFFFFF;
+}
+
+#selected {
+    background-color: rgb(76,162,223);
+}
