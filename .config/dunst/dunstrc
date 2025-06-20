@@ -1,0 +1,74 @@
+#Basic Config for Dunst
+
+[global]
+    #Display
+    monitor = 0 
+    follow = mouse 
+
+    width = (0,300)
+    height = (0,300)
+
+    origin = top_right
+    offset = (25,25)
+    scale = 0
+
+    notification_limit = 0 
+    indicate_hidden = yes
+
+    progress_bar = true 
+    progress_bar_height = 300
+    progress_bar_frame_width = 1
+    progress_bar_min_width = 150
+    progress_bar_max_width = 300
+
+    transparency = 0    #changes with x11
+
+    separator_height = 2
+    padding = 8
+    horizontal_padding = 8
+    text_icon_padding = 0
+    frame_width = 3
+    frame_color = "#aaaaaa"     #Change this later
+    separator_color = frame 
+    sort = yes
+
+    #TEXT 
+    font = Monospace 8
+    line_height = 0 
+    markup = full
+
+    format = "<b>%s</b>\n%b"
+    alignment = left
+    vertical_alignment = center
+    show_age_threshold = 60
+    ellipsize = middle
+    ignore_newline = no 
+    stack_duplicates = true
+    hide_duplicates = false
+    show_indicators = yes
+
+    # Icons
+    icon_position = left
+    min_icon_size = 0
+    max_icon_size = 32
+    icon_theme =    #Change this 
+    enable_recursive_icon_lookup = true
+
+    sticky_history = yes
+    history_length = 20
+    dmenu = /usr/bin/dmenu -p dunst:
+    browser = /usr/bin/xdg-open
+    always_run_script = true
+    title = Dunst
+    class = Dunst
+    corner_radius = 0
+    ignore_dbusclose = false
+    force_xwayland = false
+    force_xinerama = false
+
+[mouse]
+    mouse_left_click = do_action, close_current
+    mouse_middle_click = open_url, close_current
+    mouse_right_click = close_all
+
+

@@ -1,6 +1,6 @@
 -- Init parts
-require('conf.options')
-require('conf.keymaps')
-require('conf.lazy')
-require('conf.colorscheme')
-require('conf.lsp')
+require('core.options')
+require('core.keymaps')
+require('core.lazy')
+require('core.colorscheme')
+require('core.lsp')

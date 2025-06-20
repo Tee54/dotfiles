@@ -1,13 +1,5 @@
 return {
     {
-		"neovim/nvim-lspconfig", -- LSP
-		event = {"BufReadPre", "BufNewFile"},
-		config = function()
-			require('core.lsp')
-		end,
-	},
-
-	{
 		"williamboman/mason.nvim", -- Administrador for lsp services
 		build = ":MasonUpdate",
 		config = function()
@@ -23,5 +15,5 @@ return {
 				automatic_installation = true,
 			})
 		end,
-	},
+	}
 }

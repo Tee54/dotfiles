@@ -81,6 +81,13 @@
     "on-click-right": "wpctl"
 },
 
+"wireplumber": {
+    "format": "{volume}% {icon}",
+    "format-muted": "󰝟",
+    "format-icons": ["",""],
+    "on-click-right": "wpctl"
+},
+
 "custom/power": {
     "format": "{icon}",
     "format-icons": ["⏻"],

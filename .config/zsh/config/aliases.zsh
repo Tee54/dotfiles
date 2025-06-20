@@ -20,5 +20,4 @@ alias ls="ls --group-directories-first"
 #alias lsa="ls -a--group-directories-first"
 #alias lla="ls -la --group-directories-first"
 
-#TMUX
 
