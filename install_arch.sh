@@ -17,9 +17,6 @@ if ! ping -c 1 archlinux.org &>/dev/null; then
     exit 1
 fi
 
-echo "Installing base packages..."
-pacman -S --noconfirm base-devel grub zsh networkmanager iwd xdg-user-dirs efibootmgr git neovim
-
 echo "Setting up config dotfiles..."
 cp -r .config/ $HOME/
 
@@ -27,36 +24,36 @@ cp -r .config/ $HOME/
 echo "Setting up zsh..."
 cp .zshrc $HOME/
 source $HOME/.zshrc
+
 #Get yay
-echo "Getting yay"
-git clone https://aur.archlinux.org/yay-bin.git $XDG_DOWNLOAD_DIR/
-cd yay-bin 
-makepkg -si --noconfirm
+#echo "Getting yay"
+#git clone https://aur.archlinux.org/yay-bin.git $XDG_DOWNLOAD_DIR/
+#cd yay-bin 
+#makepkg -si --noconfirm
 
 #return 
-cd $DIR
+#cd $DIR
 
-#Core Program AUR
-echo "Installing helper"
-yay -S --noconfirm pwvucontrol nerd-fonts-complete
+#Update package database
+pacman -Sy
 
 #Core Programs
 echo "Installing Core Programs"
-pacman -S --noconfirm reflector vlc kitty p7zip noto-fonts man-pages noto-fonts-cjk ttf-font-awesome
+pacman -S --noconfirm neovim htop ripgrep lynx wireplumber fastfetch ttf-firacode-nerd ttf-font-awesome
 
 #Programs 
-echo "Installing Normal Programs"
-pacman -S --noconfirm thunar gvfs atril libreoffice-fresh firefox flatpak 
+#echo "Installing Normal Programs"
+#pacman -S --noconfirm thunar gvfs atril libreoffice-fresh firefox flatpak 
 
 #Desktop Programs
-echo "Installing Programs Before The Desktop"
-pacman -S --noconfirm brightnessctl dunst wofi waybar papirus-icon-theme
+#echo "Installing Programs Before The Desktop"
+#pacman -S --noconfirm brightnessctl dunst wofi waybar papirus-icon-theme
 
 #HYRPLAND!!!!
-echo "Installing hyprland"
-pacman -S --noconfirm hyprland hyprpaper hyprlock hyprutils wl-clipboard
+#echo "Installing hyprland"
+#pacman -S --noconfirm hyprland hyprpaper hyprlock hyprutils wl-clipboard
 
-echo "Installing MATE"
-pacman -S --noconfirm marco mate-control-center mate-desktop mate-session-manager mate-panel
+#echo "Installing MATE"
+#pacman -S --noconfirm marco mate-control-center mate-desktop mate-session-manager mate-panel
 
 echo "That's all folks!!!"

@@ -21,7 +21,7 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities()
 local servers = {
     "lua_ls",
     "clangd",
-    "harper-ls",
+    "harper_ls",
 }
 
 -- Set server configuration
@@ -60,4 +60,21 @@ lspconfig.clangd.setup({
             "--function-arg-placeholders",
             "--fallback-style=llvm",
         }
+})
+
+lspconfig.harper_ls.setup({
+    settings = {
+        ["harper-ls"] = {
+            linters = {
+                SentenceCapitalization = false, -- Change this if markdown
+                SpellCheck = false, -- Change this if markdown
+            },
+            markdown = {
+                IgnoreLinkTitle = false
+            },
+            diagnosticSeverity = "hint",
+            isolateEnglish = false,
+            dialect = "American",
+        }
+    }
 })

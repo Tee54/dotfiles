@@ -5,14 +5,27 @@
 "layer": "top",
 "reload_style_on_change": true,
 
-"modules-left": ["hyprland/workspaces"],
+"modules-left": ["sway/workspaces"],
 "modules-center": ["clock"],
-"modules-right": ["network","pulseaudio","battery","custom/power"],
+"modules-right": ["network","wireplumber","battery","custom/power"],
+
+// DESKTOP ENVIROMENT
+"sway/workspaces": {
+    "format": "{name}",
+    "all-outputs": true,
+    "persistent-workspaces": {
+        "1": [],
+        "2": [],
+        "3": [],
+        "4": [],
+        "5": []
+    }
+},
 
 "hyprland/workspaces": {
     "format": "{icon} {windows} ",
     "format-window-separator": " ",
-    "window-rewrite-default": "",
+    "window-rewrite-default": "?",
     "tooltip": false,
     "persistent-workspaces": {
         "*": 5
@@ -28,9 +41,10 @@
     }
 },
 
+// MODULES
 "battery": {
-    "format": "{capacity}% {icon}",
-    "format-icons": ["","","","",""],
+    "format": "{icon} {capacity}%",
+    "format-icons": [" "," "," "," "," "],
     "format-time": "{H} h {M} min",
     "max-length": 25,
     "interval": 60,
@@ -46,21 +60,12 @@
 "clock": {
     "interval": 60,
     "format": "{:%I:%M %p}",
-    //"timezone": "America/Denver", //CORREGIR NO MULTI TIME
-    "tooltip-format": "<tt>{calendar}</tt>",
-    "calendar": {
-        "format": {
-            "today": "<span color='#fAfBfC'><b>{}</b></span>"
-        } 
+    "tooltip": false,
+    "on-click": "yad --calendar --no-buttons --close-on-unfocus --width=300 --height=200"
     },
-    "actions": {
-        "on-click-right": "shift_down",
-        "on-click": "shift_up"
-    }
-},
 
 "network": {
-    "interface": "wlan0",
+    "interface": "wlp2s0",
     "interval": 60,
     "max-length": 50,
     "format": "{ifname}",
@@ -71,7 +76,7 @@
     "tooltip-format-wifi": "{essid} ({signalStrength}%)",
     "tooltip-format-ethernet": "{ipaddr}/{cidr}",
     "tooltip-format-disconnected": "Disconnected",
-    "on-click": "kitty nmtui"
+    "on-click": "kitty -e nmtui"
 },
 
 "pulseaudio": {
@@ -82,10 +87,11 @@
 },
 
 "wireplumber": {
-    "format": "{volume}% {icon}",
+    "format": "{icon} {volume}%" ,
     "format-muted": "󰝟",
     "format-icons": ["",""],
-    "on-click-right": "wpctl"
+    "on-scroll-up": "wpctl set-volume @DEFAULT_SINK@ 5%+",
+    "on-scroll-down": "wpctl set-volume @DEFAULT_SINK@ 5%-"
 },
 
 "custom/power": {

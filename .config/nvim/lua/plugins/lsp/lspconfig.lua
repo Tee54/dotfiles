@@ -1,7 +1,7 @@
 return {
     "neovim/nvim-lspconfig",
     event = {"bufReadPre", "BufNewFile"},
-    config = function()
+    opt = function()
         require("core.lsp")
     end,
 }

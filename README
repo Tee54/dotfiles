@@ -1,16 +1,58 @@
-### Dotfiles
+### Dotfiles ###
 
 This are my dotfiles for daily use. Feel free to use what you need. 
 
-### Desktop's Environments
+### Desktop's Environments ###
 
-Hyprland
-    hyprpaper
-    hypridle
-    hyprlock
-    waybar
-    wofi 
-    wlgout
-Sway
+# Hyprland #
+    - hyprpaper
+    - hypridle
+    - hyprlock
+    - waybar
+    - wofi 
+    - wlgout
+    - greetd
+    - xdg-utils
+    - xdg-user-dirs
+    - xdg-desktop-portal
+    - xdg-desktop-portal-hyprland
+    - 
+
+# Sway #
+    - swaybg 
+    - waybar
+    - wofi
+    - grim
+    - wlgout
+    - greetd
+    - xdg-utils
+    - xdg-user-dirs
+    - xdg-desktop-portal
+    - xdg-desktop-portal-wlr
+    - xdg-desktop-portal-gtk
+
+
+# Xfce4 (Future) #
+    - picom
+
+### Utils ###
+    - Neovim
+    - Thunar
+    - MPD
+    - Atril
+    - htop
+    - fastfetch
+    - ripgrep
+    - Transmission
+    - wget
+    - lynx
+    - pandoc
+    - Latex
+    - Kitty
     
-Xfce4 (Future)
+### Network ###
+    - NetworkManager (if systemd distro/OS)
+    - Conman (if no-systemd distro/OS) 
+
+### Arch Linux Specifics ###
+    - yay

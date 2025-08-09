@@ -1,36 +1,52 @@
 * {
     border: none;
-    border-radius: 30px;
-    color: white;
-    font-size: 17px;
-    font-family: "Arial", "Roboto", "Font Awesome", "Nerd Font Hack";
+    font-size: 13px;
+    font-family: Roboto, Arial, FiraCode Nerd Font;
 }
 
 window#waybar {
-    background: transparent;
+    background-color: transparent;
+    color: #e8e8e8;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
 }
 
 .modules-right, .modules-center, .modules-left {
-    margin: 2px 0 0 0; 
-    padding: 2px 5px 2px 5px; 
-    color: white;
+    border-radius: 10px;
+    background-color: rgba(43, 48, 59, 0.5);
+    border: 1px solid rgba(80, 85, 95, 0.6);
 }
 
 .modules-center {
-   background-color: rgba(54,69,79,1);
-   font-weight: bold;
+    font-weight: bold;
 }
 
 .modules-right {
-   margin-right: 10px;
-   background-color: rgba(54,69,79,1);
+    font-weight: bold;
 }
 
 .modules-left {
-   margin-left: 10px;
-   background-color: rgba(54,69,79,1);
+    font-weight: bold;
 }
 
-#clock, #battery, #network, #pulseaudio, #custom-power, #workspaces {
-   margin: 0 10px 0 10px;
+#workspaces button {
+    color: #e0e0e0;
+    background-color: transparent;
+    transition: all 0.2s ease;
+}
+
+#workspaces button.active {
+    color: #ffb347;
+}
+
+#workspaces button:hover {
+    color: #c8e6c9;
+}
+
+#clock, #battery, #network, #pulseaudio, #wireplumber, #custom-power {
+    margin: 0 2px;
+    padding: 0 6px;
+    color: white;
 }
